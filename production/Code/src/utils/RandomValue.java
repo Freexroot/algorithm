@@ -1,5 +1,6 @@
 package utils;
 
+//随机生成数据
 public class RandomValue {
     //生成线段数组
     //minLine,MaxLine 线段的说下限。lenLine段数
