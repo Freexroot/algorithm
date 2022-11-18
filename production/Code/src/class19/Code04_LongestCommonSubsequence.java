@@ -29,6 +29,8 @@ public class Code04_LongestCommonSubsequence {
             //拆成4种可能性，其中的最大值就是答案
             int p1 = porcess1(text1, text2, a - 1, b);
             int p2 = porcess1(text1, text2, a, b - 1);
+            // p3就是可能性d)，如果可能性d)存在，即str1[i] == str2[j]，那么p3就求出来，参与pk
+            // 如果可能性d)不存在，即str1[i] != str2[j]，那么让p3等于0，然后去参与pk，反正不影响
             int p3 = text1[a] == text2[b] ? 1 + porcess1(text1, text2, a - 1, b - 1) : 0;
 
             return Math.max(p1, Math.max(p2, p3));
